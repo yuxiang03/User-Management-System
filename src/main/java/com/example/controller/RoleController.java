@@ -10,6 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
+//对敏感信息进行加密 （密码：bcrypt）加盐
+// 邮箱，电话号码等使用对称加密
+
 @RequestMapping("/role")
 @Controller
 public class RoleController {
