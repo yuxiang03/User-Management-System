@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RequestMapping("/user")
@@ -21,6 +22,18 @@ public class UserController {
     private UserService userService;
     @Autowired
     private RoleService roleService;
+
+    @RequestMapping("/login")
+    public String login(String username, String password, HttpSession session){
+        String md5Password = EnctyptToMD5.enctyptToMD5(password);
+        User user = userService.login(username,md5Password);
+        if(user != null){
+            //登陆成功 将user存储到session
+            session.setAttribute("user",user);
+            return "redirect:/index.jsp";
+        }
+        return "redirect:/login.jsp";
+    }
 
     @RequestMapping("/del/{userId}")
     public String del(@PathVariable("userId") Long userId){
