@@ -18,7 +18,7 @@ src/main/java/com/example
 ```
 
 # 技术选择
-Spring，SpringMVC，MySQL，Druid，Junit，Maven，Spring-JDBC，Mybatis
+Spring，SpringMVC，MySQL，Druid，Junit，Maven，Spring-JDBC，Mybatis，Tomcat，Servlet
 
 # 模块介绍
 ## 网站首页面
@@ -35,3 +35,9 @@ Spring，SpringMVC，MySQL，Druid，Junit，Maven，Spring-JDBC，Mybatis
 ![新建用户](https://user-images.githubusercontent.com/91106069/165745229-610d85f6-d799-4c00-984d-db31b4a56b74.png)
 ## 日志管理界面
 ![日志管理](https://user-images.githubusercontent.com/91106069/165749843-097756cd-f935-4895-8ee0-bf02387bd3e7.png)
+
+# 开发环境
+JDK     17
+MySQL   8
+Tomcat  8
+
