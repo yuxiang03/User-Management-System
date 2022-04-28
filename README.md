@@ -3,6 +3,13 @@
 User-Management-System项目是一个用户管理系统，基于Spring，SpringMVC实现，采用MD5加密技术。
 整个系统包含有网站首页，登陆界面，角色展示与管理，用户信息的展示与管理等模块
 
+# 项目结构
+```
+>src/java/main/java/com/example
+>>controller
+>>dao
+```
+
 # 技术选择
 Spring，SpringMVC，MySQL，Druid，Junit，Maven，Spring-JDBC，Mybatis
 
@@ -21,5 +28,3 @@ Spring，SpringMVC，MySQL，Druid，Junit，Maven，Spring-JDBC，Mybatis
 ![新建用户](https://user-images.githubusercontent.com/91106069/165745229-610d85f6-d799-4c00-984d-db31b4a56b74.png)
 ## 日志管理界面
 ![日志管理](https://user-images.githubusercontent.com/91106069/165749843-097756cd-f935-4895-8ee0-bf02387bd3e7.png)
-
-# 开发进度
