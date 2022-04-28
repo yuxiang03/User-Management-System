@@ -5,9 +5,16 @@ User-Management-System项目是一个用户管理系统，基于Spring，SpringM
 
 # 项目结构
 ```
->src/java/main/java/com/example
->>controller
->>dao
+User-Management-System
+|
+src/main/java/com/example
+├── contooller
+├── dao
+├── domain
+├── enctyptMD5
+├──interceptor
+├── service
+└── utills
 ```
 
 # 技术选择
