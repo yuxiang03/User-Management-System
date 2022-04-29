@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,9 +8,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>数据 - AdminLTE2定制版</title>
-<meta name="description" content="AdminLTE2定制版">
-<meta name="keywords" content="AdminLTE2定制版">
+<title>用户列表展示 - AdminLTE2</title>
+<meta name="description" content="AdminLTE2">
+<meta name="keywords" content="AdminLTE2">
 
 <!-- Tell the browser to be responsive to screen width -->
 <meta
@@ -58,6 +59,15 @@
 	href="${pageContext.request.contextPath}/plugins/ionslider/ion.rangeSlider.skinNice.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/plugins/bootstrap-slider/slider.css">
+
+	<script>
+		function delRole(roleId){
+			if(confirm("您确认要删除吗")){
+				location.href="${pageContext.request.contextPath}/role/del/"+roleId;
+			}
+		}
+	</script>
+
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -141,34 +151,17 @@
 									</tr>
 								</thead>
 								<tbody>
-
+									<c:forEach items="${roleList}" var="role">
 										<tr>
 											<td><input name="ids" type="checkbox"></td>
-											<td>1</td>
-											<td>院长</td>
-											<td>java学院整体工作管理</td>
+											<td>${role.id}</td>
+											<td>${role.roleName}</td>
+											<td>${role.roleDesc}</td>
 											<td class="text-center">
-												<a href="#" class="btn bg-olive btn-xs">删除</a>
+												<a href="javascript:void(0);" onclick="delRole('${role.id}')" class="btn bg-olive btn-xs">删除</a>
 											</td>
 										</tr>
-										<tr>
-											<td><input name="ids" type="checkbox"></td>
-											<td>2</td>
-											<td>课程研究员</td>
-											<td>课程的研究</td>
-											<td class="text-center">
-												<a href="#" class="btn bg-olive btn-xs">删除</a>
-											</td>
-										</tr>
-										<tr>
-											<td><input name="ids" type="checkbox"></td>
-											<td>3</td>
-											<td>讲师</td>
-											<td>授课工作</td>
-											<td class="text-center">
-												<a href="#" class="btn bg-olive btn-xs">删除</a>
-											</td>
-										</tr>
+									</c:forEach>
 								</tbody>
 
 							</table>
@@ -194,8 +187,8 @@
 			<div class="pull-right hidden-xs">
 				<b>Version</b> 1.0.8
 			</div>
-			<strong>Copyright &copy; 2018-2020 <a
-				href="http://www.itcast.cn">研究院研发部</a>.
+			<strong>Copyright &copy; 2022.03-2022.05 <a
+				href="https://github.com/yuxiang03">Vagrant Smith</a>.
 			</strong> All rights reserved. </footer>
 			<!-- 底部导航 /-->
 

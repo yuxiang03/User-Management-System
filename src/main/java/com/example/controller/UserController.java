@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.domain.Role;
 import com.example.domain.User;
+import org.mindrot.jbcrypt.BCrypt;
 import com.example.enctyptMD5.EnctyptToMD5;
 import com.example.service.RoleService;
 import com.example.service.UserService;
@@ -23,10 +24,13 @@ public class UserController {
     @Autowired
     private RoleService roleService;
 
+    private static final String SALT = "$2a$10$Nsf/5GOl9JZtbpWHjykN/4";
+
     @RequestMapping("/login")
     public String login(String username, String password, HttpSession session){
-        String md5Password = EnctyptToMD5.enctyptToMD5(password);
-        User user = userService.login(username,md5Password);
+        String BCryptPassword = BCrypt.hashpw(password,SALT);
+        //String md5Password = EnctyptToMD5.enctyptToMD5(password);
+        User user = userService.login(username,BCryptPassword);
         if(user != null){
             //登陆成功 将user存储到session
             session.setAttribute("user",user);
@@ -43,7 +47,8 @@ public class UserController {
 
     @RequestMapping("/save")
     public String save(User user,Long[] roleIds){
-        String password = EnctyptToMD5.enctyptToMD5(user.getPassword());
+        String password = BCrypt.hashpw(user.getPassword(),SALT);
+        //String password = EnctyptToMD5.enctyptToMD5(user.getPassword());
         user.setPassword(password);
         userService.save(user,roleIds);
         return "redirect:/user/list";
