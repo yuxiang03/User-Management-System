@@ -11,9 +11,9 @@
 
 
 
-    <title>数据 - AdminLTE2定制版</title>
-    <meta name="description" content="AdminLTE2定制版">
-    <meta name="keywords" content="AdminLTE2定制版">
+    <title>数据 - AdminLTE2</title>
+    <meta name="description" content="AdminLTE2">
+    <meta name="keywords" content="AdminLTE2">
 
 
 
