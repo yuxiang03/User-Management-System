@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.RoleMapper">
+    <insert id="save">
+        insert into sys_role values (null,#{roleName},#{roleDesc});
+    </insert>
+    <delete id="del">
+        delete from sys_user_role where userId = #{roleId};
+    </delete>
+    <delete id="delRoleRel">
+        delete from sys_role where id = #{roleId};
+    </delete>
+
+    <select id="findAll" resultType="com.example.domain.Role">
+        select * from sys_role;
+    </select>
+    <select id="findRoleByUserId" resultType="com.example.domain.Role">
+        select * from sys_user_role ur,sys_role r where ur.roleId=r.id and ur.userId = #{id}
+    </select>
+</mapper>
