@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.io.IOException;
 import java.util.List;
 
 //对敏感信息进行加密 （密码：bcrypt）加盐
@@ -37,7 +36,7 @@ public class RoleController {
     }
 
     @RequestMapping("/list")
-    public ModelAndView list() throws IOException {
+    public ModelAndView list(){
         ModelAndView modelAndView = new ModelAndView();
         List<Role> roleList = roleService.list();
         //设置模型

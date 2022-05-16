@@ -2,9 +2,7 @@
 /Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/interceptor/PrivilegeInterceptor.java
 /Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/service/UserService.java
 /Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/dao/impl/UserDaoImpl.java
-/Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/mapper/RoleMapper.java
 /Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/domain/User.java
-/Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/mapper/UserMapper.java
 /Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/dao/RoleDao.java
 /Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/service/RoleService.java
 /Users/yuxiang/Workspace/spring-exercise/src/main/java/com/example/controller/RoleController.java

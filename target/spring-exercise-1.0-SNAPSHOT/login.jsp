@@ -59,7 +59,7 @@
 				</div>
 			</form>
 
-			<a href="#">我爱郑莘钰</a>
+			<a href="#">忘记密码</a><br>
 
 
 		</div>

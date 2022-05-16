@@ -2,11 +2,10 @@ package com.example.service;
 
 import com.example.domain.Role;
 
-import java.io.IOException;
 import java.util.List;
 
 public interface RoleService {
-    public List<Role> list() throws IOException;
+    public List<Role> list();
 
     void save(Role role);
 
