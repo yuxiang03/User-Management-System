@@ -1,6 +1,6 @@
 # User-Management-System
 # 项目介绍
-User-Management-System项目是一个用户管理系统，基于Spring，SpringMVC实现，采用MD5加密技术。
+User-Management-System项目是一个用户管理系统，基于Spring，SpringMVC实现，采用BCypt加密技术。
 整个系统包含有网站首页，登陆界面，角色展示与管理，用户信息的展示与管理等模块
 
 # 项目结构
