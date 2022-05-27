@@ -13,6 +13,5 @@ public interface RoleDao {
 
     void del(Long userId);
 
-
     void delRoleRel(Long roleId);
 }

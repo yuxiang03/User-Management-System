@@ -121,7 +121,8 @@
                                         <i class="fa fa-file-o"></i> 新建
                                     </button>
 
-                                    <button type="button" class="btn btn-default" title="刷新">
+                                    <button type="button" class="btn btn-default" title="刷新"
+                                            onclick="location.href='${pageContext.request.contextPath}/user/list'">
                                         <i class="fa fa-refresh"></i> 刷新
                                     </button>
                                 </div>
@@ -195,7 +196,7 @@
     <!-- 底部导航 -->
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <b>Version</b> 1.0.8
+            我爱<b>郑莘钰</b>
         </div>
         <strong>Copyright &copy; 2022.03-2022.05 <a
                 href="https://github.com/yuxiang03">Vagrant Smith</a>.

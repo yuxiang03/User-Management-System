@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 @RequestMapping("/user")
@@ -55,7 +56,7 @@ public class UserController {
     }
 
     @RequestMapping("/saveUI")
-    public ModelAndView saveUI(){
+    public ModelAndView saveUI() throws IOException {
         ModelAndView modelAndView = new ModelAndView();
         List<Role> roleList = roleService.list();
         modelAndView.addObject("roleList",roleList);
