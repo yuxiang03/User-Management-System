@@ -3,7 +3,6 @@ package com.example.controller;
 import com.example.domain.Role;
 import com.example.domain.User;
 import org.mindrot.jbcrypt.BCrypt;
-import com.example.enctyptMD5.EnctyptToMD5;
 import com.example.service.RoleService;
 import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
